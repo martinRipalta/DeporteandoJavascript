@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+header .row nav .container-fluid, footer, main .formularioHome fieldset {
+  border: 2px solid black; }
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-color: black;
+  color: black;
+  font-family: sans-serif; }
+  body .estiloGeneral {
+    display: grid;
+    grid-template-columns: repeat(4, 0.25fr);
+    grid-template-rows: 0.1fr 2fr 0.5fr;
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer";
+    height: 100vh; }
+    body .estiloGeneral header {
+      grid-area: header; }
+    body .estiloGeneral main {
+      grid-area: main; }
+    body .estiloGeneral footer {
+      grid-area: footer; }
+
+header .row nav .container-fluid, footer, main .formularioHome fieldset {
+  border: 2px solid black; }
+
+header {
+  grid-area: header;
+  background: linear-gradient(90deg, white 20%, #ffa424 40%, #ff9800 75%, #bd6e03 100%); }
+  header .row nav .container-fluid {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 0.1fr;
+    grid-template-areas: "img h1 desplegable";
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, white 5%, #ffa424 20%, #ff9800 75%, #bd6e03 100%); }
+    header .row nav .container-fluid a img {
+      width: 85%;
+      grid-area: img; }
+    header .row nav .container-fluid h1 a {
+      font-family: 'Permanent Marker';
+      color: black;
+      text-align: center;
+      justify-content: center;
+      grid-area: h1;
+      font-size: larger; }
+    header .row nav .container-fluid .desplegable {
+      grid-area: desplegable; }
+      header .row nav .container-fluid .desplegable #offcanvasNavbar {
+        background: linear-gradient(360deg, white 10%, #ffa424 20%, #ff9800 60%, #bd6e03 100%); }
+        header .row nav .container-fluid .desplegable #offcanvasNavbar .offcanvas-header h2 {
+          color: black;
+          font-size: 2rem; }
+        header .row nav .container-fluid .desplegable #offcanvasNavbar .offcanvas-body .navbar-nav .nav-item a {
+          color: black;
+          font-size: 1rem;
+          font-weight: 2px; }
+        header .row nav .container-fluid .desplegable #offcanvasNavbar .offcanvas-body .navbar-nav .dropdown .dropdown-menu {
+          background: linear-gradient(270deg, white 5%, #ffa424 20%, #ff9800 60%, #bd6e03 100%); }
+
+header .row nav .container-fluid, footer, main .formularioHome fieldset {
+  border: 2px solid black; }
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.5fr 0.1fr;
+  grid-template-areas: "footerDerecha footerCentral" "footerAbajo footerAbajo";
+  background: linear-gradient(90deg, white 5%, #ffa424 20%, #ff9800 75%, #bd6e03 100%); }
+  footer .footerDerecha {
+    grid-area: footerDerecha; }
+    footer .footerDerecha img {
+      width: 60%; }
+  footer .footerCentral {
+    grid-area: footerCentral;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 1rem; }
+    footer .footerCentral .footerSecciones h3 {
+      text-align: left; }
+    footer .footerCentral .footerSecciones ul li {
+      list-style: none;
+      text-decoration: none; }
+      footer .footerCentral .footerSecciones ul li a {
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        font-weight: lighter; }
+    footer .footerCentral .footerDescarga h3 {
+      text-align: left; }
+    footer .footerCentral .footerDescarga ul li {
+      list-style: none;
+      text-decoration: none;
+      word-spacing: 2px; }
+    footer .footerCentral .footerContacto h3 {
+      text-align: left; }
+    footer .footerCentral .footerContacto ul li {
+      list-style: none;
+      text-decoration: none; }
+      footer .footerCentral .footerContacto ul li a {
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        font-weight: lighter; }
+      footer .footerCentral .footerContacto ul li a:hover {
+        color: white; }
+    footer .footerCentral .footerContacto ul .mail {
+      margin-right: 5px;
+      font-size: small; }
+    footer .footerCentral .footerContacto ul .redesSociales img {
+      width: 8%; }
+  footer .footerAbajo {
+    grid-area: footerAbajo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px; }
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 0.25fr;
+    grid-template-areas: "logo centro centro centro" "logo abajo abajo abajo"; }
+    footer .footerDerecha {
+      grid-area: logo; }
+    footer .footerCentral {
+      grid-area: centro;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      footer .footerCentral .footerSecciones {
+        width: 30rem; }
+        footer .footerCentral .footerSecciones h3 {
+          text-align: center; }
+        footer .footerCentral .footerSecciones ul {
+          text-align: center; }
+          footer .footerCentral .footerSecciones ul li {
+            padding: 5px; }
+      footer .footerCentral .footerDescarga {
+        width: 60rem; }
+        footer .footerCentral .footerDescarga h3 {
+          text-align: center; }
+        footer .footerCentral .footerDescarga ul {
+          text-align: center; }
+          footer .footerCentral .footerDescarga ul li {
+            padding: 5px; }
+      footer .footerCentral .footerContacto h3 {
+        text-align: center; }
+      footer .footerCentral .footerContacto ul {
+        text-align: center; }
+        footer .footerCentral .footerContacto ul li {
+          padding: 5px; }
+        footer .footerCentral .footerContacto ul .redesSociales img {
+          width: 20%; }
+    footer .footerAbajo {
+      grid-area: abajo; } }
+
+@media screen and (min-width: 1200px) {
+  footer .footerCentral .footerSecciones ul li a:hover {
+    color: white; } }
+
+header .row nav .container-fluid, footer, main .formularioHome fieldset {
+  border: 2px solid black; }
+
+main .mainArriba img {
+  width: 100%; }
+
+main .formularioHome {
+  position: relative;
+  bottom: 110px;
+  left: 280px;
+  max-width: 12rem;
+  max-height: 0.1rem; }
+  main .formularioHome fieldset legend {
+    font-size: x-small;
+    color: beige;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px black; }
+  main .formularioHome fieldset div {
+    font-size: xx-small;
+    color: beige;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 1px 1px black; }
+    main .formularioHome fieldset div img {
+      width: 5%; }
+    main .formularioHome fieldset div input {
+      width: 4rem;
+      font-size: smaller; }
+
+main .animate__shakeY h2 {
+  text-align: center;
+  word-spacing: 2px;
+  font-size: 2.8rem;
+  margin: 50px;
+  color: #D35400;
+  text-shadow: 2px 2px black; }
+
+main .seccionUnoHome {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  column-gap: 1.5rem;
+  border-bottom: 5px solid #D35400;
+  margin-bottom: 25px;
+  row-gap: 2rem;
+  margin-left: 10px;
+  margin-right: 10px; }
+  main .seccionUnoHome .seccionUnoHomeReduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center; }
+    main .seccionUnoHome .seccionUnoHomeReduce img {
+      width: 20%;
+      justify-content: center; }
+    main .seccionUnoHome .seccionUnoHomeReduce h3 {
+      text-align: center;
+      color: white; }
+    main .seccionUnoHome .seccionUnoHomeReduce p {
+      text-align: center;
+      width: 10rem;
+      color: white; }
+  main .seccionUnoHome .seccionUnoHomeFacil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px; }
+    main .seccionUnoHome .seccionUnoHomeFacil img {
+      width: 15%;
+      justify-content: center; }
+    main .seccionUnoHome .seccionUnoHomeFacil h3 {
+      text-align: center;
+      color: white; }
+    main .seccionUnoHome .seccionUnoHomeFacil p {
+      text-align: center;
+      width: 9.5rem;
+      color: white; }
+  main .seccionUnoHome .seccionUnoHomeEncontra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center; }
+    main .seccionUnoHome .seccionUnoHomeEncontra img {
+      width: 15%;
+      justify-content: center; }
+    main .seccionUnoHome .seccionUnoHomeEncontra h3 {
+      text-align: center;
+      color: white; }
+    main .seccionUnoHome .seccionUnoHomeEncontra p {
+      text-align: center;
+      width: 10rem;
+      color: white; }
+  main .seccionUnoHome .seccionUnoHomeArma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 43px; }
+    main .seccionUnoHome .seccionUnoHomeArma img {
+      width: 15%;
+      justify-content: center; }
+    main .seccionUnoHome .seccionUnoHomeArma h3 {
+      text-align: center;
+      color: white; }
+    main .seccionUnoHome .seccionUnoHomeArma p {
+      text-align: center;
+      width: 9.5rem;
+      color: white;
+      margin-top: 27px; }
+
+main .homePasos .mapaHome iframe {
+  width: 95%;
+  margin-left: 15px;
+  margin-right: 15px; }
+
+main .homePasos .seccionDosHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center; }
+  main .homePasos .seccionDosHome h2 {
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 40px;
+    margin: 15px;
+    color: #D35400;
+    text-shadow: 2px 2px black; }
+  main .homePasos .seccionDosHome ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white; }
+    main .homePasos .seccionDosHome ol li {
+      font-weight: bold;
+      color: white; }
+    main .homePasos .seccionDosHome ol img {
+      margin: 10px; }
+    main .homePasos .seccionDosHome ol .seccionDosHomeBusca {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      main .homePasos .seccionDosHome ol .seccionDosHomeBusca p {
+        text-align: center;
+        width: 20rem;
+        font-size: 1rem;
+        margin: 10px;
+        color: white; }
+      main .homePasos .seccionDosHome ol .seccionDosHomeBusca img {
+        width: 10%; }
+    main .homePasos .seccionDosHome ol .seccionDosHomeReserva {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      main .homePasos .seccionDosHome ol .seccionDosHomeReserva p {
+        text-align: center;
+        width: 20rem;
+        font-size: 1rem;
+        color: white; }
+      main .homePasos .seccionDosHome ol .seccionDosHomeReserva img {
+        width: 15%; }
+    main .homePasos .seccionDosHome ol .seccionDosHomeJuega {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      main .homePasos .seccionDosHome ol .seccionDosHomeJuega p {
+        text-align: center;
+        font-size: 1rem;
+        color: white; }
+      main .homePasos .seccionDosHome ol .seccionDosHomeJuega img {
+        width: 10%; }
+
+@media screen and (min-width: 600px) {
+  main .formularioHome {
+    position: relative;
+    bottom: 155px;
+    left: 360px;
+    max-width: 14rem;
+    max-height: 0.1rem; }
+    main .formularioHome fieldset legend {
+      font-size: smaller;
+      color: beige;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 1px 1px black;
+      margin: 2px; }
+    main .formularioHome fieldset div {
+      font-size: smaller;
+      color: beige;
+      text-align: left;
+      font-weight: bold;
+      text-shadow: 1px 1px black;
+      margin: 2px; }
+      main .formularioHome fieldset div img {
+        width: 10%; }
+  main .seccionUnoHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center; }
+    main .seccionUnoHome .seccionUnoHomeReduce img {
+      width: 20%; }
+    main .seccionUnoHome .seccionUnoHomeFacil img {
+      width: 15%; }
+    main .seccionUnoHome .seccionUnoHomeEncontra img {
+      width: 15%; }
+    main .seccionUnoHome .seccionUnoHomeArma img {
+      width: 10%; }
+  main .homePasos {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas: "mapa seccionDos"; }
+    main .homePasos .mapaHome {
+      grid-area: mapa; }
+      main .homePasos .mapaHome iframe {
+        width: 90%; }
+    main .homePasos .seccionDosHome {
+      grid-area: seccionDos;
+      justify-content: center;
+      align-items: center;
+      text-align: center; } }
+
+@media screen and (min-width: 1200px) {
+  main .formularioHome {
+    position: relative;
+    bottom: 222px;
+    left: 100px;
+    max-width: 25rem;
+    max-height: 3rem; }
+    main .formularioHome fieldset legend {
+      font-size: larger;
+      color: beige;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 1px 1px black;
+      margin: 5px; }
+    main .formularioHome fieldset div {
+      font-size: larger;
+      color: beige;
+      text-align: left;
+      font-weight: bold;
+      text-shadow: 1px 1px black;
+      margin: 5px; }
+      main .formularioHome fieldset div img {
+        width: 8%; }
+      main .formularioHome fieldset div input {
+        width: 7rem;
+        font-size: small; }
+  main .seccionUnoHome {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    column-gap: 1.5rem;
+    border-bottom: 5px solid #D35400;
+    margin-bottom: 25px;
+    row-gap: 2rem;
+    margin-left: 10px;
+    margin-right: 10px; }
+    main .seccionUnoHome .seccionUnoHomeReduce {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      main .seccionUnoHome .seccionUnoHomeReduce img {
+        width: 5%;
+        justify-content: center; }
+      main .seccionUnoHome .seccionUnoHomeReduce h3 {
+        text-align: center;
+        color: white; }
+      main .seccionUnoHome .seccionUnoHomeReduce p {
+        text-align: center;
+        width: 10rem;
+        color: white; }
+    main .seccionUnoHome .seccionUnoHomeFacil {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin-top: 10px; }
+      main .seccionUnoHome .seccionUnoHomeFacil img {
+        width: 5%;
+        justify-content: center; }
+      main .seccionUnoHome .seccionUnoHomeFacil h3 {
+        text-align: center;
+        color: white; }
+      main .seccionUnoHome .seccionUnoHomeFacil p {
+        text-align: center;
+        width: 9.5rem;
+        color: white; }
+    main .seccionUnoHome .seccionUnoHomeEncontra {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      main .seccionUnoHome .seccionUnoHomeEncontra img {
+        width: 5%;
+        justify-content: center; }
+      main .seccionUnoHome .seccionUnoHomeEncontra h3 {
+        text-align: center;
+        color: white; }
+      main .seccionUnoHome .seccionUnoHomeEncontra p {
+        text-align: center;
+        width: 10rem;
+        color: white; }
+    main .seccionUnoHome .seccionUnoHomeArma {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center; }
+      main .seccionUnoHome .seccionUnoHomeArma img {
+        width: 5%;
+        justify-content: center; }
+      main .seccionUnoHome .seccionUnoHomeArma h3 {
+        text-align: center;
+        color: white; }
+      main .seccionUnoHome .seccionUnoHomeArma p {
+        text-align: center;
+        width: 10rem;
+        color: white; } }
+
+header .row nav .container-fluid, footer, main .formularioHome fieldset {
+  border: 2px solid black; }

@@ -1,0 +1,19 @@
+@import "../base/variables";
+@import "../base/maps";
+@import "../base/mixin";
+@import "../base/extend";
+
+*{padding: 0px; margin:0px;box-sizing: border-box;};
+
+body {
+    background-color:black;
+    color: map-get($map: $diseñoEstandar, $key: colorEstandar );
+    font-family: sans-serif;
+    .estiloGeneral{
+        display: grid;grid-template-columns:repeat(4,0.25fr) ;grid-template-rows:0.1fr 2fr 0.5fr ;grid-template-areas:"header header header header" "main main main main" "footer footer footer footer";height: 100vh;
+        header{
+            grid-area:header};
+        main{
+            grid-area:main};
+        footer{ grid-area:footer
+        }}}
